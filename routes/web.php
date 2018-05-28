@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/session-sample/raw/set', 'RawPHPSessionController@setSession');
+Route::get('/session-sample/raw/unset', 'RawPHPSessionController@unsetSession');
+
+Route::get('/session-sample/laravel/set', 'LaravelSessionController@setSession');
+Route::get('/session-sample/laravel/unset', 'LaravelSessionController@unsetSession');
