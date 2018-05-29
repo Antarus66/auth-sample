@@ -23,6 +23,12 @@ class UsersTableSeeder extends Seeder
                 'email' => 'user@example.com',
                 'password' => bcrypt('123456')
             ],
+            [
+                'name' => 'Admin',
+                'email' => 'admin@example.com',
+                'password' => bcrypt('123456'),
+                'is_admin' => true,
+            ],
         ];
 
         for ($i = 0; $i < count($users); $i++) {
