@@ -21,3 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/auth/github', 'SocialAuthController@redirectToProvider');
 Route::get('/auth/github/callback', 'SocialAuthController@handleProviderCallback');
+
+Route::resource('articles', 'ArticlesController')->only([
+    'index', 'show'
+]);
