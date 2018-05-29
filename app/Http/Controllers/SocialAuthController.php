@@ -33,7 +33,7 @@ class SocialAuthController extends Controller
             $user = User::create([
                 'name' => $socialUser->user['login'],
                 'email' => $socialUser->email,
-                'password' => '123456'
+                'password' => str_random(6),
             ]);
         }
 
