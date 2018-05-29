@@ -34,6 +34,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+                        <li><a class="nav-link" href="{{ route('home') }}">{{ __('Dashboard') }}</a></li>
                         <li><a class="nav-link" href="{{ route('articles.index') }}">{{ __('Articles') }}</a></li>
                     </ul>
 
