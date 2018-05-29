@@ -25,7 +25,7 @@ class ArticlePolicy
      */
     public function view(User $user, Article $article)
     {
-        return $this->isUsersArticle($user, $article);
+        return $this->isUsersArticle($user, $article) || $user->isAdmin();
     }
 
     /**

@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Only admins can see this
                 </div>
             </div>
         </div>
