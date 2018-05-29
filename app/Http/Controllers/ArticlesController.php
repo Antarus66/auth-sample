@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Article;
-use Illuminate\Http\Request;
+use Illuminate\Auth\Access\AuthorizationException;
 
 class ArticlesController extends Controller
 {
@@ -31,6 +31,12 @@ class ArticlesController extends Controller
 
         if (!$article) {
             return view('404');
+        }
+
+        try {
+            $this->authorize('view', $article);
+        } catch (AuthorizationException $e) {
+            return redirect("/articles");
         }
 
         return view('articles.show', ['article' => $article]);
