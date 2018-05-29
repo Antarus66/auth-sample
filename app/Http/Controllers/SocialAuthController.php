@@ -11,7 +11,7 @@ use Laravel\Socialite\Facades\Socialite;
 class SocialAuthController extends Controller
 {
 
-    protected $redirectPath = '/';
+    protected $redirectPath = '/articles';
 
     public function redirectToProvider(Request $request) {
         return Socialite::driver('github')->redirect();
