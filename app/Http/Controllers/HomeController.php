@@ -27,7 +27,7 @@ class HomeController extends Controller
         if (Gate::allows('view-dashboard')) {
             return view('home');
         } else {
-            return redirect('/');
+            return redirect()->back();
         }
     }
 }
